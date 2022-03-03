@@ -72,5 +72,7 @@ frame_build_in = generate_data()
 frame_fetched = csv_upload()
 frames = [frame_fetched, frame_build_in]
 final_product = pd.concat(frames)
-print(final_product)
-final_product.to_csv('/Users/kayra/Desktop/grey.csv')
+reindex_finalP = final_product.reset_index()
+print(reindex_finalP)
+reindex_finalP.to_csv('/Users/kayra/Desktop/FinalProduct.csv')
+
